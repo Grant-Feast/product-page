@@ -1,0 +1,107 @@
+body {
+  margin: 0px;
+  font-family: 'Assistant', sans-serif;
+}
+
+header, main {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+}
+
+.main-nav, .icon-container {
+  display: none;
+}
+
+.logo {
+  height: 20px;
+}
+
+.burger-icon {
+  display: block;
+  height: 20px;
+}
+
+/* Main section styles */
+/* Product image styles */
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-img-container {
+  order: 2;
+}
+
+.product-img-container img {
+  max-width: 100%;
+}
+
+.buy-btn {
+  background-color: #000000;
+  margin-bottom: 20px;
+}
+
+.cart-btn, .buy-btn {
+  border-radius: 34px;
+  height: 47px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid #000000;
+}
+
+.cart-btn a, .buy-btn a {
+  text-decoration: none;
+}
+
+.cart-btn a {
+  color: #000000;
+}
+
+.buy-btn a {
+  color: #ffffff;
+}
+
+/* Aside styles */
+
+aside {
+  width: 100%;
+}
+
+.heading-container h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.price-container p {
+  font-weight: bold;
+}
+
+.color-container h4, .quantity-container h4 {
+  font-weight: 400;
+}
+
+.minus-icon, .plus-icon {
+  height: 20px;
+  display: inline-block;
+}
+
+.quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  height: 25px;
+  border: 1px solid #000000;
+}
