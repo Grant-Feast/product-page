@@ -105,3 +105,50 @@ aside {
   height: 25px;
   border: 1px solid #000000;
 }
+
+@media only screen and (min-width: 658px) {
+  main {
+    width: 80%;
+  }
+  .cart-btn, .buy-btn {
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .burger-container {
+    display: none;
+  }
+  .main-nav, .icon-container {
+    display: block;
+  }
+  .main-nav {
+    width:  200px;
+  }
+  .icon-container {
+    width: 100px;
+  }
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    justify-content: space-around;
+  }
+  .main-nav ul li a {
+    text-decoration: none;
+    color: #000000;
+  }
+  .icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .product-img-container .product-row:nth-of-type(2),
+  .product-img-container .product-row:nth-of-type(3),
+  .product-img-container .product-row:nth-of-type(4),
+  .product-img-container .product-row:nth-of-type(5) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+  }
+}
