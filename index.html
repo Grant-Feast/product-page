@@ -14,25 +14,25 @@
       <img class="logo" src="assets/logo.png" alt="Dawn Logo">
     </section>
 
-    <div class="burger-container">
+    <div id="burger" class="burger-container">
       <svg class="burger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
       </svg>      
     </div>
 
-    <nav class="main-nav">
+    <nav id="nav" class="main-nav hidden">
       <ul>
         <li><a href="#">Store</a></li>
         <li><a href="#">Our Story</a></li>
         <li><a href="#">Journal</a></li>
       </ul>
     </nav>
-    <section class="icon-container">
+    <section class="icon-container hidden">
       <a href="#">
         <img src="assets/Union.svg" alt="Search Icon">
       </a>
        <a href="#">
-        <img src="assets/Vector.svg" alt="User Icon">
+        <img class="user-icon" src="assets/Vector.svg" alt="User Icon">
       </a>
       <a href="#">
         <img src="assets/bag.svg" alt="Cart Icon">
@@ -41,6 +41,7 @@
   </header>
   <main>
     <section class="product-container">
+      <!-- Product images -->
       <section class="product-img-container">
         <div class="product-row">
           <img src="assets/cwc-model-1.jpeg" alt="The Camden Watch Company canvas bag - tan">
@@ -81,13 +82,17 @@
           <img src="assets/cwc-model-4.jpeg" alt="The Camden Watch Company canvas bag - tan">
         </div>
       </section>
-      <aside>
+      <!-- Product info section -->
+      <aside class="product-info-container">
+        <!-- Product name -->
         <div class="heading-container">
           <h2>Waxed Canvas Backpack</h2>
         </div>
+        <!-- Product price -->
         <div class="price-container">
           <p>£125 GBP</p>
         </div>
+        <!-- Product color -->
         <div class="color-container">
           <h4>Color</h4>
           <div class="color-types">
@@ -95,6 +100,57 @@
             <p>Black</p>
           </div>
         </div>
+        <!-- Personalisation toggle element -->
+        <div id="personalise-toggle" class="toggle-container">
+          <div class="personalise-container">
+            <p id="default-text">Add a Personalisation</p>
+            <p id="input-text"></p>
+            <div id="plus-container">
+              <svg class="open-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+              </svg>
+            </div>
+            <div id="clear-container">
+              <svg class="clear-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg> 
+            </div>
+          </div>
+        </div>
+        <!-- Start of modal overlay -->
+        <div id="modal" class="overlay hidden">       
+          <!-- Start of modal -->
+          <div class="modal-container">
+            <div id="close-modal" class="close-btn-container">
+              <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>      
+            </div>
+            <div class="modal-content">
+              <div class="description">
+                <h3>Add a Personalisation</h3>
+                <p>If you're looking to add a personal touch to your purchase, our product personalization service is just what you need! You can now customize your product to make it truly one-of-a-kind by adding your own text</p>
+              </div>
+              <div class="form">
+                <form>
+                  <div class="form-row">
+                    <input id="userInput" type="text" name="personalisation" maxlength="23">
+                    <span class="placeholder">Personalisation</span>
+                    <div id="textSubmit">
+                      <p>Add to product</p>
+                    </div> 
+                  </div>
+                </form>
+              </div>
+              <div class="char-limit">
+                <p>Character Limit - <span class="char-limit-style">{{ character_limit }}</span></p>
+              </div>
+            </div>
+          </div>
+          <!-- End of modal -->
+        </div>
+        <!-- End of overlay -->
+        <!-- Product quantity selected by customer -->
         <div class="quantity-container">
           <h4>Quantity</h4>
           <div class="quantity">
@@ -107,6 +163,7 @@
             </svg>
           </div>
         </div>
+        <!-- Buttons section -->
         <div class="btn-container">
           <div class="cart-btn">
             <p><a href="#">Add to cart</a></p>
@@ -120,6 +177,6 @@
   </main>
   
 
-<source src="app.js" type="javascript">
+<script src="app.js"></script>
 </body>
 </html>
