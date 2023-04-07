@@ -1,7 +1,8 @@
 // Collapsable menu variales
 const burgerIcon = document.getElementById('burger');
 // Color option variables
-const color = document.getElementsByClassName('color-option');
+const colorTan = document.getElementById('color-tan');
+const colorBlack = document.getElementById('color-black');
 // Modal variables
 const modal = document.getElementById('modal');
 const openModal = document.getElementById('plus-container')
@@ -52,6 +53,7 @@ submitBtn.addEventListener('click', () => {
   modal.classList.add('hidden');
   plusIcon.classList.add('hidden');
   clearIcon.classList.add('show');
+  userInput.value = '';
 })
 
 // When the user clicks on the x icon in the personalisation element, the input text is cleared
@@ -60,6 +62,17 @@ clearIcon.addEventListener('click', () => {
   clearIcon.classList.remove('show');
   plusIcon.classList.add('show');
 }) 
+
+// When the user chooses a color of the product a class of active is given
+colorBlack.addEventListener('click', () => {
+  colorBlack.classList.add('active');
+  colorTan.classList.remove('active');
+})
+
+colorTan.addEventListener('click', () => {
+  colorTan.classList.add('active');
+  colorBlack.classList.remove('active');
+})
 
 // Allows the user to increase or decrease the quantity of the product
 function incrementValue()

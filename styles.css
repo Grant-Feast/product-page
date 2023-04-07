@@ -3,7 +3,7 @@ body {
   font-family: 'Assistant', sans-serif;
 }
 
-p, h2, h3, h4 {
+h2, h3, h4 {
   color: #121212;
 }
 
@@ -17,7 +17,7 @@ p, h2, h3, h4 {
 
 .active {
   background-color: #121212;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 header, main {
