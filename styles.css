@@ -7,53 +7,57 @@ p, h2, h3, h4 {
   color: #121212;
 }
 
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+.active {
+  background-color: #121212;
+  color: #ffffff;
+}
+
 header, main {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Header styles */
 header {
   display: flex;
   justify-content: space-between;
   height: 40px;
   align-items: center;
 }
-
-.hidden {
-  display: none;
-}
-
-.logo {
+.logo, .burger-icon {
   height: 20px;
 }
-
 .burger-icon {
   display: block;
-  height: 20px;
 }
 
 /* Main section styles */
 /* Product image styles */
-
 .product-container {
   display: flex;
   flex-wrap: wrap;
 }
-
 .product-img-container {
   order: 2;
 }
-
 .product-img-container img {
   max-width: 100%;
 }
 
+/* Aside styles */
 .buy-btn {
-  background-color: #000000;
+  background-color: #121212;
   margin-bottom: 20px;
 }
-
 .cart-btn, .buy-btn {
   border-radius: 34px;
   height: 47px;
@@ -62,39 +66,47 @@ header {
   margin-right: auto;
   margin-top: 20px;
   text-align: center;
-  border: 1px solid #000000;
+  border: 1px solid #121212;
 }
-
 .cart-btn a, .buy-btn a {
   text-decoration: none;
 }
-
 .cart-btn a {
-  color: #000000;
+  color: #121212;
 }
-
 .buy-btn a {
   color: #ffffff;
 }
-
-/* Aside styles */
-
 aside {
   width: 100%;
   letter-spacing: 1px;
 }
-
 .heading-container h2 {
   font-size: 18px;
-  font-weight: 400;
 }
-
 .price-container p {
   font-weight: bold;
 }
-
-.color-container h4, .quantity-container h4 {
+.color-container h4,
+.quantity-container h4,
+.heading-container h2 {
   font-weight: 400;
+}
+.color-types {
+  display: flex;
+}
+.color-option {
+  color: #121212;
+  border: 1px solid #7D7D7D;
+  height: 33px;
+  width: 112px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 99px;
+  margin-right: 10px;
+  margin-bottom: 16px;
+  cursor: pointer;
 }
 
 /* Toggle element styles */
@@ -118,9 +130,9 @@ aside {
 .open-icon, .clear-icon {
   height: 18px;
   cursor: pointer;
-  margin-top: 12px;
+  margin-top: 8px;
 }
-#clear-container {
+.clear-container {
   display: none;
 }
 
@@ -139,7 +151,6 @@ aside {
   height: 20px;
   display: inline-block;
 }
-
 .quantity {
   display: flex;
   justify-content: space-between;
@@ -350,5 +361,12 @@ aside {
   }
   .cart-btn, .buy-btn {
     width: 331px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  header {
+    padding-left: 6%;
+    padding-right: 13%;
   }
 }

@@ -96,21 +96,24 @@
         <div class="color-container">
           <h4>Color</h4>
           <div class="color-types">
-            <p>Tan</p>
-            <p>Black</p>
+            <div class="color-option">
+              <p class="color">Tan</p>
+            </div>
+            <div class="color-option">
+              <p class="color">Black</p>
+            </div>
           </div>
         </div>
         <!-- Personalisation toggle element -->
         <div id="personalise-toggle" class="toggle-container">
           <div class="personalise-container">
             <p id="default-text">Add a Personalisation</p>
-            <p id="input-text"></p>
             <div id="plus-container">
               <svg class="open-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
               </svg>
             </div>
-            <div id="clear-container">
+            <div id="clear-container" class="clear-container">
               <svg class="clear-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg> 
@@ -134,7 +137,7 @@
               <div class="form">
                 <form>
                   <div class="form-row">
-                    <input id="userInput" type="text" name="personalisation" maxlength="23">
+                    <input id="user-input" type="text" name="personalisation" maxlength="23">
                     <span class="placeholder">Personalisation</span>
                     <div id="textSubmit">
                       <p>Add to product</p>
@@ -143,7 +146,7 @@
                 </form>
               </div>
               <div class="char-limit">
-                <p>Character Limit - <span class="char-limit-style">{{ character_limit }}</span></p>
+                <p>Character Limit - <span class="char-limit-style">23</span></p>
               </div>
             </div>
           </div>
