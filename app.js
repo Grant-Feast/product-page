@@ -10,6 +10,8 @@ const defaultTag = document.getElementById('default-text');
 // Personalisation element variables
 const plusIcon = document.getElementById('plus-container');
 const clearIcon = document.getElementById('clear-container');
+// Quantity variables
+const quantity = document.getElementById('quantity-input');
 
 
 // when the burger icon is clicked on mobile screens, the hidden class is added or removed from the main nav
@@ -54,8 +56,29 @@ submitBtn.addEventListener('click', () => {
 
 // When the user clicks on the x icon in the personalisation element, the input text is cleared
 clearIcon.addEventListener('click', () => {
-  defaultTag.innerText = `Add a personalisation`;
+  defaultTag.innerText = 'Add a personalisation';
   clearIcon.classList.remove('show');
   plusIcon.classList.add('show');
 }) 
+
+// Allows the user to increase or decrease the quantity of the product
+function incrementValue()
+{
+  let value = parseInt(quantity.value, 10);
+  value = isNaN(value) ? 0 : value;
+  if(value<10){
+    value++;
+    quantity.value = value;
+  }
+}
+
+function decreaseValue() {
+  let value = parseInt(quantity.value, 10);
+  value = isNaN(value) ? 0 : value;
+  if(value>1){
+    value--;
+    quantity.value = value;
+  }
+}
+
   

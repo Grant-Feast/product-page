@@ -108,6 +108,13 @@ aside {
   margin-bottom: 16px;
   cursor: pointer;
 }
+.plus-icon, .minus-icon {
+  cursor: pointer;
+}
+.quantity-input {
+  width: 15px;
+  border: none;
+}
 
 /* Toggle element styles */
 .personalise-container {
