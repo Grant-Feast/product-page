@@ -34,13 +34,13 @@ openModal.addEventListener('click', () => {
 })
 
 // Hides the modal and overlay when the user clicks on the close icon
-document.getElementById("close-modal").onclick = function() {
+document.getElementById("close-modal").onclick = () => {
   modal.classList.add('hidden');
 }
 
 // Hides the modal and overlay when a user clicks anywhere on the screen outside of the modal box
-window.onclick = function(event) {
-  if(event.target === modal) {
+window.onclick = (e) => {
+  if(e.target === modal) {
     modal.classList.add('hidden');
   }
 }
@@ -50,9 +50,9 @@ window.onclick = function(event) {
 submitBtn.addEventListener('click', () => {
   const userInput = document.getElementById('user-input');
   defaultTag.innerText = `Personalisation - ${userInput.value}`;
-  modal.classList.add('hidden');
   plusIcon.classList.add('hidden');
   clearIcon.classList.add('show');
+  modal.classList.add('hidden');
   userInput.value = '';
 })
 
@@ -60,7 +60,7 @@ submitBtn.addEventListener('click', () => {
 clearIcon.addEventListener('click', () => {
   defaultTag.innerText = 'Add a personalisation';
   clearIcon.classList.remove('show');
-  plusIcon.classList.add('show');
+  plusIcon.classList.remove('hidden');
 }) 
 
 // When the user chooses a color of the product a class of active is given
