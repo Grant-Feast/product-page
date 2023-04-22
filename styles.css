@@ -32,12 +32,32 @@ header {
   justify-content: space-between;
   height: 40px;
   align-items: center;
+  position: relative;
 }
 .logo, .burger-icon {
   height: 20px;
 }
 .burger-icon {
   display: block;
+}
+/* Nav styles */
+.main-nav {
+  position: absolute;
+  top: 30px;
+  background-color: #ffffff;
+  width: 100%;
+}
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.main-nav ul li {
+  margin-top: 20px;
+}
+.main-nav ul li a {
+  text-decoration: none;
+  color: #121212;
 }
 
 /* Main section styles */
@@ -284,6 +304,9 @@ aside {
   }
   .cart-btn, .buy-btn {
     width: 400px;
+  }
+  .main-nav {
+    top: -10px;
   }
 }
 
