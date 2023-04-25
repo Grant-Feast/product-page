@@ -59,6 +59,17 @@ header {
   text-decoration: none;
   color: #121212;
 }
+.icon-container {
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+  top: 170px;
+  text-align: center;
+}
+.icon-container a {
+  text-decoration: none;
+  padding: 10px;
+}
 
 /* Main section styles */
 /* Product image styles */
@@ -346,6 +357,11 @@ aside {
   .main-nav {
     top: -10px;
   }
+  .icon-container {
+    top: 140px;
+    position: initial;
+    width: 20%;
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -366,9 +382,6 @@ aside {
     width:  200px;
     position: absolute;
     left: 18%;
-  }
-  .icon-container {
-    width: 100px;
   }
   .main-nav ul {
     display: flex;
@@ -470,6 +483,9 @@ aside {
     font-size: 30px;
     margin-top: 0;
     margin-bottom: 16px;
+  }
+  .icon-container {
+    width: 10%;
   }
   .color-container h4 {
     margin-top: 16px;

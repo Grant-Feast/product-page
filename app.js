@@ -22,10 +22,13 @@ const carousel = document.getElementById('carousel');
 // when the burger icon is clicked on mobile screens, the hidden class is added or removed from the main nav
 burgerIcon.addEventListener('click', () => {
   const mainNav = document.getElementById('nav');
-  if (mainNav.classList.contains('hidden')) {
+  const icons = document.getElementById('header-icons');
+  if (mainNav.classList.contains('hidden') && icons.classList.contains('hidden')) {
     mainNav.classList.remove('hidden');
+    icons.classList.remove('hidden');
   } else {
     mainNav.classList.add('hidden');
+    icons.classList.add('hidden');
   }
 })
 
