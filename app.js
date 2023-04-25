@@ -19,7 +19,7 @@ const zoom = document.getElementById('zoom-btn');
 const carousel = document.getElementById('carousel');
 
 
-// when the burger icon is clicked on mobile screens, the hidden class is added or removed from the main nav
+// when the burger icon is clicked on mobile screens, the hidden class is added or removed from the main nav and header icons
 burgerIcon.addEventListener('click', () => {
   const mainNav = document.getElementById('nav');
   const icons = document.getElementById('header-icons');
